@@ -1,0 +1,50 @@
+.slide-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 83px;
+  background-color: var(--bg-color);
+}
+.slide-product__sub-title {
+/* Subheading - Medium */
+  font-family: 'Times New Roman';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  /* Secondary / Orange / Dark Shade */
+  color: #C16426;
+}
+.slide-product__title {
+  /* H2 */
+  /* font-family: 'Louis George Cafe'; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  /* identical to box height, or 117% */
+  text-align: center;
+
+  /* Typography / Header  */
+  color: #000000;
+  margin-top: 16px;
+}
+.slide-product-container {
+  width: 100%;
+  max-width: 1442px;
+  margin-top: 40px;
+}
+.card-product-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.card-product-item {
+  max-width: 338px;
+}

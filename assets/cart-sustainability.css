@@ -1,0 +1,39 @@
+.card-sustainability {
+  max-width: 340px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-sustainability__thumbnail {
+  /* flex-grow: 1; */
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.card-sustainability__title { 
+  margin-top: 24px;
+
+  font-family: 'Louis George Cafe';
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+.card-sustainability__description { 
+  /* font-family: 'Louis George Cafe'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  text-align: center;
+
+  /* Typography / Header  */
+  color: #000000;
+
+  margin-top: 10px;
+}

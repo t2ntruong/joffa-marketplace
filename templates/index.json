@@ -1,5 +1,123 @@
 {
   "sections": {
+    "introduction": {
+      "type": "introduction",
+      "blocks": {
+        "93b039db-f0f7-49c9-a41b-ff8d35e93d83": {
+          "type": "card-introduction",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image.png",
+            "redirect_url": "",
+            "button_label": "Shop now",
+            "image_shape": "default"
+          }
+        },
+        "36492a3f-99a9-4058-a3ae-8361561c35cf": {
+          "type": "card-introduction",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_1.png",
+            "redirect_url": "",
+            "button_label": "Shop now",
+            "image_shape": "round"
+          }
+        },
+        "55765c7a-17dd-4782-b8d2-c3b55afed5ab": {
+          "type": "card-introduction",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2.png",
+            "redirect_url": "",
+            "button_label": "Shop now",
+            "image_shape": "default"
+          }
+        }
+      },
+      "block_order": [
+        "93b039db-f0f7-49c9-a41b-ff8d35e93d83",
+        "36492a3f-99a9-4058-a3ae-8361561c35cf",
+        "55765c7a-17dd-4782-b8d2-c3b55afed5ab"
+      ],
+      "settings": {
+        "heading": "Lorem ipsum",
+        "text": "Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc.",
+        "background": "shopify:\/\/shop_images\/image_5.png"
+      }
+    },
+    "033f6135-2cd0-49ef-ae09-8498977353ed": {
+      "type": "sustainability",
+      "blocks": {
+        "420825f4-929f-4d5c-aa4a-ba69a69483b5": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sustainability",
+            "heading_size": "h2"
+          }
+        },
+        "fdd8e9d7-1be7-4829-aadf-d9706f06da27": {
+          "type": "text",
+          "settings": {
+            "text": "Egestas purus viverra accumsan.",
+            "text_style": "body"
+          }
+        },
+        "5ab1c527-4a1d-4eaa-b916-4d8fc9832b03": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "",
+            "button_style_secondary_1": false
+          }
+        },
+        "ed55019d-eceb-422e-9a7e-7afdf714c74e": {
+          "type": "card-sustainability",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_6.png",
+            "image_width": 160,
+            "image_height": 76.4,
+            "inline_richtext": "Made with love",
+            "text": "Bibendum est ultricies integer quis auctor. Lacus vestibulum sed arcu non odio."
+          }
+        },
+        "41932635-f992-4393-b905-867cdbed95f5": {
+          "type": "card-sustainability",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_7.png",
+            "image_width": 76.4,
+            "image_height": 100,
+            "inline_richtext": "Made for impact",
+            "text": "Sodales neque sodales ut etiam sit amet. Habitant morbi tristique senectus et."
+          }
+        },
+        "fb23109a-88d3-49bf-9d07-991d88c03839": {
+          "type": "card-sustainability",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_8.png",
+            "image_width": 76.4,
+            "image_height": 100,
+            "inline_richtext": "Made to last",
+            "text": "Nunc faucibus a pellentesque sit. Sit amet nisl suscipit adipiscing bibendum."
+          }
+        }
+      },
+      "block_order": [
+        "420825f4-929f-4d5c-aa4a-ba69a69483b5",
+        "fdd8e9d7-1be7-4829-aadf-d9706f06da27",
+        "5ab1c527-4a1d-4eaa-b916-4d8fc9832b03",
+        "ed55019d-eceb-422e-9a7e-7afdf714c74e",
+        "41932635-f992-4393-b905-867cdbed95f5",
+        "fb23109a-88d3-49bf-9d07-991d88c03839"
+      ],
+      "settings": {
+      }
+    },
+    "57dc65e2-b9f6-437a-afcc-77485b99477a": {
+      "type": "slide-product",
+      "settings": {
+        "collection": "frontpage",
+        "bg_color": "#fbf6f2",
+        "sub_title": "Handcrafted",
+        "title": "Best Sellers"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -21,7 +139,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -35,12 +153,14 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/wallpaperflare.com_wallpaper.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "inverse",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -68,6 +188,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
@@ -79,17 +201,25 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "background-1",
+        "full_width": false,
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -127,6 +257,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -136,8 +267,9 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -191,15 +323,18 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "introduction",
+    "033f6135-2cd0-49ef-ae09-8498977353ed",
+    "57dc65e2-b9f6-437a-afcc-77485b99477a",
     "image_banner",
     "rich_text",
     "featured_collection",

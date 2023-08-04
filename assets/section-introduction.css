@@ -1,0 +1,64 @@
+.introduction {
+  position: relative;
+  padding-top: 133px;
+  padding-bottom: 419px;
+}
+
+.introduction-card-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 60px;
+}
+
+.introduction-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction-description__heading {
+  font-family: 'Times New Roman';
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  color: #E1D7CE;
+
+  margin-top: 27px;
+}
+
+.introduction-description__text {
+  /* font-family: 'Louis George Cafe'; */
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+  color: #FBF6F2;
+
+  max-width: 752px;
+
+  margin-top: 20px;
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.introduction-background {
+  position: absolute;
+  z-index: -1;
+  top: 349px;
+  left: 0;
+  right: 0;
+}
+.introduction-background img {
+  width: 100% !important;
+  height: 100%;
+}

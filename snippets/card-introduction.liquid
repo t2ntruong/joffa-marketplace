@@ -1,0 +1,13 @@
+<div class="card-introduction card-introduction--{{ shape }}">
+  {{
+     img_url
+   | image_url: width: 440
+   | image_tag:
+   loading: "lazy",
+   width: 440,
+   height: 560,
+   class: 'card-introduction__thumbnail' }}
+  <a href="{{ redirect_url }}" class="card-introduction__button">
+    {{ button_label }}
+  </a>
+</div>

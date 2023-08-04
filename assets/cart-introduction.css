@@ -1,0 +1,28 @@
+.card-introduction {
+  position: relative;
+}
+
+.card-introduction:nth-child(even) {
+  transform: translateY(-79px);
+}
+.card-introduction--default {
+  
+}
+
+.card-introduction--round {
+  border-radius: 225px 220px 0px 0px;
+  overflow: hidden;
+}
+
+.card-introduction__button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #C16426;
+  color: #fff;
+  padding: 8px 36px;
+}

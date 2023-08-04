@@ -1,0 +1,179 @@
+{{ "section-sustainability.css" | asset_url | stylesheet_tag }}
+
+<div
+  id="sustainability-{{ section.id }}"
+  class="sustainability slider-mobile-gutter scroll-trigger animate--slide-in">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'heading' -%}
+      <h2
+        class="sustainability__heading inline-richtext {{ block.settings.heading_size }}"
+        {{ block.shopify_attributes }}>
+        {{ block.settings.heading }}
+      </h2>
+      {%- when 'text' -%}
+      <div
+        class="sustainability__text rte {{ block.settings.text_style }}"
+        {{ block.shopify_attributes }}>
+        <p>{{ block.settings.text }}</p>
+      </div>
+      {%- when 'buttons' -%}
+      <div
+        class="sustainability__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+        {{ block.shopify_attributes }}>
+        {%- if block.settings.button_label_1 != blank -%}
+          <a
+            {% if block.settings.button_link_1 == blank %}role="link"aria-disabled="true"{% else %}href="{{ block.settings.button_link_1 }}"{% endif %}class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}">
+            {{- block.settings.button_label_1 | escape -}}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endcase -%}
+  {%- endfor -%}
+  <div
+    class="card-sustainability-container">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {% when 'card-sustainability' %}
+        {% render 'card-sustainability' 
+         , img_url: block.settings.image,
+         img_width: block.settings.image_width,
+         img_height: block.settings.image_height,
+         title: block.settings.inline_richtext,
+         description: block.settings.text %}
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Sustainability",
+    "tag": "section",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "t:sections.image-banner.blocks.heading.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "default": "Sustainability",
+            "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+          }, {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+              {
+                "value": "h2",
+                "label": "t:sections.all.heading_size.options__1.label"
+              }, {
+                "value": "h1",
+                "label": "t:sections.all.heading_size.options__2.label"
+              }, {
+                "value": "h0",
+                "label": "t:sections.all.heading_size.options__3.label"
+              }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+          }
+        ]
+      }, {
+        "type": "text",
+        "name": "t:sections.image-banner.blocks.text.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "default": "Egestas purus viverra accumsan.",
+            "label": "t:sections.image-banner.blocks.text.settings.text.label"
+          }, {
+            "type": "select",
+            "id": "text_style",
+            "options": [
+              {
+                "value": "body",
+                "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+              }, {
+                "value": "subtitle",
+                "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+              }, {
+                "value": "caption-with-letter-spacing",
+                "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+              }
+            ],
+            "default": "body",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+          }
+        ]
+      }, {
+        "type": "card-sustainability",
+        "name": "Card sustainability",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.image-banner.settings.image.label"
+          },
+          {
+            "type": "number",
+            "id": "image_width",
+            "label": "Image Width"
+          },
+          {
+            "type": "number",
+            "id": "image_height",
+            "label": "Image Height"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "inline_richtext",
+            "label": "Title"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Description"
+          }
+        ]
+      }, {
+        "type": "buttons",
+        "name": "t:sections.image-banner.blocks.buttons.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_label_1",
+            "default": "Shop now",
+            "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+            "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+          }, {
+            "type": "url",
+            "id": "button_link_1",
+            "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+          }, {
+            "type": "checkbox",
+            "id": "button_style_secondary_1",
+            "default": false,
+            "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sustainability",
+        "blocks": [
+          {
+            "type": "card-sustainability"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,101 @@
+{{ "section-introduction.css" | asset_url | stylesheet_tag }}
+{{ "cart-introduction.css" | asset_url | stylesheet_tag }}
+
+<div
+  id="Introduction-{{ section.id }}"
+  class="introduction slider-mobile-gutter scroll-trigger animate--slide-in">
+  <div
+    class="introduction-background">
+    {{ section.settings.background 
+     | image_url: width: 3840
+     | image_tag }}
+  </div>
+  <div
+    class="introduction-card-container">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'card-introduction' %}
+        {% render 'card-introduction' 
+         , img_url: block.settings.image,
+         redirect_url: block.settings.redirect_url,
+         button_label: block.settings.button_label,
+         shape: block.settings.image_shape %}
+    {% else %}
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div
+    class="introduction-description">
+    <h2
+      class="introduction-description__heading">{{ section.settings.heading }}</h2>
+    <p
+      class="introduction-description__text">{{ section.settings.text }}</p>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Introduction",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "default": "Lorem ipsum",
+        "label": "t:sections.collage.settings.heading.label"
+      }, {
+        "type": "text",
+        "id": "text",
+        "default": "Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc.",
+        "label": "t:sections.image-banner.blocks.text.settings.text.label"
+      }, {
+        "type": "image_picker",
+        "id": "background",
+        "label": "Back ground"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "card-introduction",
+        "name": "Card Introduction",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.image-banner.settings.image.label"
+          }, {
+            "type": "url",
+            "id": "redirect_url",
+            "label": "Redirect Url"
+          }, {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label"
+          }, {
+            "type": "select",
+            "id": "image_shape",
+            "options": [
+              {
+                "value": "default",
+                "label": "t:sections.all.image_shape.options__1.label"
+              }, {
+                "value": "round",
+                "label": "t:sections.all.image_shape.options__8.label"
+              }
+            ],
+            "default": "default",
+            "label": "t:sections.all.image_shape.label",
+            "info": "t:sections.all.image_shape.info"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Introduction"
+      }
+    ]
+  }
+{% endschema %}

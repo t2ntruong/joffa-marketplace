@@ -1,0 +1,19 @@
+{{ "cart-sustainability.css" | asset_url | stylesheet_tag }}
+
+<div class="card-sustainability card-sustainability--{{ shape }}">
+  <div class='card-sustainability__thumbnail'>
+    {{
+       img_url
+     | image_url: width: 440
+     | image_tag:
+     loading: "lazy",
+     width: img_width,
+     height: img_height }}
+  </div>
+  <p class="card-sustainability__title">
+    {{ title }}
+  </p>
+  <p class="card-sustainability__description">
+    {{ description }}
+  </p>
+</div>

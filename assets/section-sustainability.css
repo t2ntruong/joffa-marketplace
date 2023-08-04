@@ -1,0 +1,69 @@
+.sustainability {
+  margin-top: -269px;
+  padding: 138px 0 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+.sustainability__heading {
+  font-family: 'Times New Roman';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #C16426;
+}
+.sustainability__text {
+  margin-top: 17px;
+  
+  /* font-family: 'Louis George Cafe'; */
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  color: #000;
+}
+.sustainability__buttons {
+  /* Secondary / Orange / Dark Shade */
+  background-color: #C16426;
+  
+  /* Menu/Buttons/Text */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  /* identical to box height, or 200% */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  /* Typography / White */
+  color: #FFFFFF;
+  order: 4;
+  margin-top: 30px;
+}
+.sustainability__buttons a { 
+  opacity: 1;
+  background-color: transparent;
+}
+.sustainability__buttons a::after,
+.sustainability__buttons a::before { 
+  content: none;
+}
+
+.card-sustainability-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 80px;
+  order: 3;
+  margin-top: 24px;
+}
